@@ -42,7 +42,7 @@ This project aims to process CO₂ sequestration data, compute important metrics
    - Each image is segmented to isolate regions relevant to carbon content estimation. 
    - The segmentation step prepares inputs for the learning model, emphasizing vegetated and high-carbon zones.
      
-4. **Model Architecture:**
+4. ** 🏗️Model Architecture:**
     
    The model is designed to capture rich spatial features from satellite images for precise carbon sequestration estimation. It integrates the following components: 
    - 1. ResNet-50 Encoder:
