@@ -41,4 +41,8 @@ This project aims to process CO₂ sequestration data, compute important metrics
 ### Prerequisites  
 Make sure you have Python 3.8+ installed and install the required libraries:  
 ```bash
-pip install pandas numpy matplotlib
+pip install pandas numpy matplotlib 
+## 🧑‍💻 Steps to Run
+### 1. Clone this repository:
+```bash
+git clone https://github.com/yourusername/carbon-sequestration-trend-analysis.git
