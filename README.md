@@ -21,11 +21,18 @@ This project aims to process CO₂ sequestration data, compute important metrics
 ---
 
 ## 4. ⚙️ Implementation Overview  
-1. **Data Loading:** Reads CO₂ sequestration data from a CSV file.  
-2. **Trend Analysis:**  
-   - Performs linear regression to determine overall trends (increasing/decreasing).  
-   - Computes rate of change and key metrics (mean, max, min, std deviation).  
-   - Uses rolling windows to analyze short-term fluctuations.  
+1. **Data Preparation:**
+   - Satellite images are organized within a base directory.
+   - A 70 : 30 train–test split is created automatically using the split_data() function.
+   - Separate folders train/ and test/ are generated for subsequent model training and evaluation.
+2. **Data Augmentation:**  
+   - To address the limited dataset size, classical augmentation is applied:  
+     - Rotation
+     - Flipping
+     - Zooming
+     - Brightness variation
+     - Noise injection
+   - Augmentation increases sample diversity, improving the model’s generalization capability. 
 3. **Metric Computation:**  
    - Moving Average  
    - Running Total  
