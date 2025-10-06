@@ -103,7 +103,8 @@ cd Predicting-climate-change-effects-on-carbon-sequestration-using-DL
 pip install -r requirements.txt
 ```
 ### 5.Run the main analysis script:
-```python carbonseq.ipynb
+```bash
+python carbonseq.ipynb
 ```
 ### 6. View results:
    - Segmented images, CO₂ sequestration metrics, and trend analysis will be saved in the `result/` directory.
