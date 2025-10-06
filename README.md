@@ -15,7 +15,9 @@ This project aims to process CO₂ sequestration data, compute important metrics
   - `pandas` – Data handling and preprocessing  
   - `numpy` – Numerical computations  
   - `matplotlib` – Data visualization  
-  - `scikit-learn` *(optional)* – For additional trend modeling  
+  - `scikit-learn` – For additional trend modeling
+  - `OpenCV` - Image processing and segmentation
+  - `PyTorch` - Deep learning model implementation and training
 - **Dataset:** CO₂ sequestration results generated from satellite-based or simulation data (`CO2_seq.csv`)
 
 ---
