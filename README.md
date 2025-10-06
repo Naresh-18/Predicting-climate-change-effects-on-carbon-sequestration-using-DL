@@ -21,13 +21,13 @@ This project aims to process CO₂ sequestration data, compute important metrics
 ---
 
 ## 4. ⚙️ Implementation Overview  
-1. **Data Preparation:**
+1. 🗂️** Data Preparation:**
    
    - Satellite images are organized within a base directory.
    - A 70 : 30 train–test split is created automatically using the split_data() function.
    - Separate folders train/ and test/ are generated for subsequent model training and evaluation.
      
-2. **Data Augmentation:**
+2. 🎨** Data Augmentation:**
    
    - To address the limited dataset size, classical augmentation is applied:  
      - Rotation
@@ -37,12 +37,12 @@ This project aims to process CO₂ sequestration data, compute important metrics
      - Noise injection
    - Augmentation increases sample diversity, improving the model’s generalization capability.
      
-3. **Image Segmentation:**
+3. ✂️** Image Segmentation:**
    
    - Each image is segmented to isolate regions relevant to carbon content estimation. 
    - The segmentation step prepares inputs for the learning model, emphasizing vegetated and high-carbon zones.
      
-4. 🏗️**Model Architecture:**
+4. 🏗️** Model Architecture:**
     
    The model is designed to capture rich spatial features from satellite images for precise carbon sequestration estimation. It integrates the following components: 
    - 1. ResNet-50 Encoder:
@@ -59,7 +59,25 @@ This project aims to process CO₂ sequestration data, compute important metrics
        - Skip connections from encoder layers retain fine-grained spatial details.
    - 5. Output:
        - Produces a binary or density mask representing vegetation/carbon-rich regions.
-       - The mask is later used to compute quantitative carbon sequestration metrics.  
+       - The mask is later used to compute quantitative carbon sequestration metrics.
+         
+5. ⚡** Training Procedure:**
+
+   - Data are normalized and batched for efficient GPU processing.
+   - The model is compiled using an adaptive optimizer (e.g., Adam) and a Dice loss function.
+   - Training metrics such as loss and accuracy are logged for each epoch.
+   - Early stopping and model checkpoints ensure optimal performance without overfitting.
+
+6. 📊** Evaluation and Visualization:**
+
+   - Predictions are compared against the ground-truth carbon data stored in a CSV file.
+   - Visualization routines plot original vs. predicted images 🖼️ and display the learning curves 📈.
+   - The resulting CSV of predicted carbon values supports downstream climate-trend analysis.
+
+7. 🚀 **Future Integration:**
+
+   - The trained model can be extended with additional temporal datasets to enhance forecasting.
+   - Integration with generative models 🤖 or transfer learning 🔄 is suggested for data augmentation and spatial up-sampling.
 ---
 
 ## 5. 🧑‍💻 Run Locally  
