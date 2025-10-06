@@ -33,14 +33,26 @@ This project aims to process CO₂ sequestration data, compute important metrics
      - Brightness variation
      - Noise injection
    - Augmentation increases sample diversity, improving the model’s generalization capability. 
-3. **Metric Computation:**  
-   - Moving Average  
-   - Running Total  
-   - Expanding Mean  
-4. **Visualization:**  
-   - Plots trends and time-series graphs for better interpretability.  
-   - Exports detailed trend analysis results as a CSV and visual plots as PNG.  
-
+3. **Image Segmentation:**  
+   - Each image is segmented to isolate regions relevant to carbon content estimation. 
+   - The segmentation step prepares inputs for the learning model, emphasizing vegetated and high-carbon zones.  
+4. **Model Architecture:**  
+   The model is designed to capture rich spatial features from satellite images for precise carbon sequestration estimation. It integrates the following components: 
+   - 1. ResNet-50 Encoder:
+      - Serves as the backbone to extract hierarchical spatial features from input images.
+      - Pre-trained weights from ImageNet improve feature extraction on limited datasets.
+   - 2. Attention Blocks:
+      - Applied at intermediate layers to focus on relevant vegetation and high-carbon regions.
+      - Enhances feature representation by emphasizing important spatial areas.
+   - 3. ASPP (Atrous Spatial Pyramid Pooling) Module:
+      - Captures multi-scale contextual information using dilated convolutions.
+      - Helps the network understand features at different spatial resolutions.
+   - 4. Decoder (U-Net–style)
+      - Uses transposed convolutions to upsample features and reconstruct spatial maps.
+      - Skip connections from encoder layers retain fine-grained spatial details.
+   - 5. Output:
+      - Produces a binary or density mask representing vegetation/carbon-rich regions.
+      - The mask is later used to compute quantitative carbon sequestration metrics.  
 ---
 
 ## 5. 🧑‍💻 Run Locally  
