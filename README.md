@@ -1,7 +1,7 @@
 # Predicting-climate-change-effects-on-carbon-sequestration-using-DL
 A data-driven analysis of carbon sequestration trends using Python. This project processes CO₂ sequestration data, computes key metrics, identifies long- and short-term trends, and visualizes patterns to understand ecosystem carbon capture dynamics over time, aiding climate impact studies.
 
-____
+--
 
 ## 2. 💡 Motivation  
 Climate change mitigation heavily depends on understanding how ecosystems capture and store atmospheric CO₂. Carbon sequestration analysis helps scientists, policymakers, and researchers estimate carbon capture potential and predict future climate trends.  
