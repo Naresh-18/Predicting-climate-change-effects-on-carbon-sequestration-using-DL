@@ -40,10 +40,19 @@ This project aims to process CO₂ sequestration data, compute important metrics
 
 ### Prerequisites  
 Make sure you have Python 3.8+ installed and install the required libraries:  
-bash    
-pip install pandas numpy matplotlib
+```bash    
+pip install pandas numpy matplotlib 
+```
 
 ## 🧑‍💻 Steps to Run
 ### 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/carbon-sequestration-trend-analysis.git
+git clone https://github.com/yourusername/Predicting-climate-change-effects-on-carbon-sequestration-using-DL.git
+```
+### 2. Navigate to the project folder:
+```bash
+cd carbon-sequestration-analysis.ipynb
+```
+### 3.Place your dataset inside the Predicting-climate-change-effects-on-carbon-sequestration-using-DL/ folder:
+
+Make sure your dataset is named:
